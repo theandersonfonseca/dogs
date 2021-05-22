@@ -28,7 +28,7 @@ const GlobalStyle = createGlobalStyle`
       min-height: 100vh;
       text-rendering: optimizeSpeed;
       line-height: 1.5;
-      color: ${theme.colors.dark};
+      color: ${theme.colors.black};
     `}
   }
 

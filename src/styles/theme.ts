@@ -5,7 +5,8 @@ export default {
     white: '#FFFFFF',
     black: '#333333',
     gray: '#666666',
-    LightGray: '#EEEEEE'
+    LightGray: '#EEEEEE',
+    lightYellow: '#FFEEAA'
   },
 
   font: {
@@ -20,7 +21,8 @@ export default {
       large: '1.8rem',
       xlarge: '2.0rem',
       xxlarge: '2.8rem',
-      xxxlarge: '3rem'
+      xxxlarge: '3.2rem',
+      huge: '4.8rem'
     }
   },
 
