@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components'
 
 export const Wrapper = styled.h1`
   ${({ theme }) => css`
-    font-size: ${theme.font.sizes.xxxlarge};
+    font-size: ${theme.font.sizes.huge};
     position: relative;
 
     &::before {
