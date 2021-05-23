@@ -2,7 +2,7 @@ import * as S from './styles'
 
 import { Helmet } from 'react-helmet'
 
-import Base from '../../templates/Base'
+import PageBase from '../../templates/PageBase'
 import Heading from '../../components/Heading'
 import Container from '../../components/Container'
 
@@ -12,12 +12,12 @@ const Page404 = () => (
       <title>404 | Dogs</title>
     </Helmet>
 
-    <Base>
+    <PageBase>
       <Container>
         <Heading>Erro 404</Heading>
         <S.Text>Página não encontrada.</S.Text>
       </Container>
-    </Base>
+    </PageBase>
   </>
 )
 
