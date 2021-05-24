@@ -6,7 +6,8 @@ export default {
     black: '#333333',
     gray: '#666666',
     LightGray: '#EEEEEE',
-    lightYellow: '#FFEEAA'
+    lightYellow: '#FFEEAA',
+    red: '#FF6347'
   },
 
   font: {
