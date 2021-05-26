@@ -7,11 +7,17 @@ const wrapperModifiers = {
   medium: (theme: DefaultTheme) => css`
     font-size: ${theme.font.sizes.medium};
     padding: 1rem ${theme.spacings.large};
+    width: 15rem;
+    display: flex;
+    justify-content: center;
   `,
 
   small: (theme: DefaultTheme) => css`
     font-size: ${theme.font.sizes.medium};
     padding: ${theme.spacings.xxsmall} ${theme.spacings.xsmall};
+    width: 12rem;
+    display: flex;
+    justify-content: center;
   `
 }
 
