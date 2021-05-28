@@ -20,7 +20,7 @@ const Routes = () => {
       <Route path="/login/perdeu" component={ForgotPassword} exact />
       <Route path="/login/resetar" component={ResetPassword} />
       <Route path="/criar" component={SignUp} exact />
-      <Route path="/conta" component={Account} exact />
+      <ProtectedRoute path="/conta" component={Account} exact />
       <ProtectedRoute path="/conta/estatisticas" component={Stats} exact />
       <ProtectedRoute path="/conta/postar" component={PhotoPost} exact />
       <Route path="*" component={Page404} />
