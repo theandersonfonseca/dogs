@@ -17,5 +17,15 @@ export const Wrapper = styled.h1`
       border-radius: ${theme.border.radius};
       z-index: -1;
     }
+
+    @media (max-width: 600px) {
+      font-size: ${theme.font.sizes.xxxlarge};
+
+      &::before {
+        width: 1.4rem;
+        height: 1.4rem;
+        bottom: 1.2rem;
+      }
+    }
   `}
 `
