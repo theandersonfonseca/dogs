@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import * as S from './styles'
 
 import { tokenActions } from '../../store/token'
@@ -10,7 +11,6 @@ import { ReactComponent as ProfileIcon } from '../../assets/feed.svg'
 import { ReactComponent as StatsIcon } from '../../assets/estatisticas.svg'
 import { ReactComponent as AddImageIcon } from '../../assets/adicionar.svg'
 import { ReactComponent as LogoutIcon } from '../../assets/sair.svg'
-import { useState } from 'react'
 
 type AccountNavProps = {
   id: string
