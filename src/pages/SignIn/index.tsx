@@ -48,7 +48,7 @@ const SignIn = () => {
   useEffect(() => {
     if (tokenState.status === 'incorrect data') {
       setTimeout(() => {
-        dispatch(tokenActions.resetState())
+        dispatch(tokenActions.resetToken())
       }, 3000)
     }
   }, [tokenState.status, dispatch])
