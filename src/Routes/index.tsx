@@ -1,6 +1,6 @@
 import { Route, Switch } from 'react-router-dom'
 
-import Feed from '../pages/Feed'
+import Home from '../pages/Home'
 import SignIn from '../pages/SignIn'
 import ForgotPassword from '../pages/ForgotPassword'
 import ResetPassword from '../pages/ResetPassword'
@@ -15,7 +15,7 @@ import ProtectedRoute from './ProtectedRoute'
 const Routes = () => {
   return (
     <Switch>
-      <Route path="/" component={Feed} exact />
+      <Route path="/" component={Home} exact />
       <Route path="/login" component={SignIn} exact />
       <Route path="/login/perdeu" component={ForgotPassword} exact />
       <Route path="/login/resetar" component={ResetPassword} />
