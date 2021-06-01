@@ -8,6 +8,8 @@ import SignUp from '../pages/SignUp'
 import Account from '../pages/Account'
 import Stats from '../pages/Stats'
 import PhotoPost from '../pages/PhotoPost'
+import Profile from '../pages/Profile'
+import Photo from '../pages/Photo'
 import Page404 from '../pages/404'
 
 import ProtectedRoute from './ProtectedRoute'
@@ -23,6 +25,8 @@ const Routes = () => {
       <ProtectedRoute path="/conta" component={Account} exact />
       <ProtectedRoute path="/conta/estatisticas" component={Stats} exact />
       <ProtectedRoute path="/conta/postar" component={PhotoPost} exact />
+      <Route path="/perfil/:user" component={Profile} exact />
+      <Route path="/foto/:id" component={Photo} exact />
       <Route path="*" component={Page404} />
     </Switch>
   )
