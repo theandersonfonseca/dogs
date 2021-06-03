@@ -20,7 +20,10 @@ const Profile = () => {
       <PageBase>
         <Container>
           <Heading>{user}</Heading>
-          <Feed user={user} />
+
+          <S.Wrapper>
+            <Feed user={user} />
+          </S.Wrapper>
         </Container>
       </PageBase>
     </>
