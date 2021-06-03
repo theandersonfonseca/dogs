@@ -89,6 +89,7 @@ export const Icon = styled.button`
     &.active {
       background-color: ${theme.colors.white};
       border: 0.1rem solid ${theme.colors.primary};
+      box-shadow: 0 0 0 0.3rem ${theme.colors.lightYellow};
       color: ${theme.colors.primary};
 
       svg > * {
@@ -97,6 +98,7 @@ export const Icon = styled.button`
 
       @media (max-width: 600px) {
         border: 0.1rem solid transparent;
+        box-shadow: initial;
         }
       }
     }
