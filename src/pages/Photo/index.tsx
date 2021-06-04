@@ -1,12 +1,13 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import * as S from './styles'
 
-import { Link, useParams } from 'react-router-dom'
+import { Link, Redirect, useParams } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 
 import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from '../../store/configureStore'
 import { fetchPhoto } from '../../store/photo'
+import { PHOTO_DELETE } from '../../Api'
 
 import { ReactComponent as ViewsIcon } from '../../assets/visualizacao.svg'
 
@@ -20,50 +21,68 @@ import CommentPost from '../../components/CommentPost'
 
 const Photo = () => {
   const { id } = useParams<{ id: string }>()
-  const photoState = useSelector((state: RootState) => state.photo)
+  const { photo, comments, status } = useSelector(
+    (state: RootState) => state.photo
+  )
+  const { username } = useSelector((state: RootState) => state.user)
   const dispatch = useDispatch()
+  const [deleted, setDeleted] = useState(false)
 
   useEffect(() => {
     dispatch(fetchPhoto(id))
   }, [dispatch, id])
 
+  const handlePhotoDelete = async () => {
+    const { url, options } = PHOTO_DELETE(photo?.id as string)
+
+    const response = await fetch(url, options)
+    const reponseData = await response.json()
+
+    if (reponseData === 'Post deletado.') setDeleted(true)
+  }
+
   return (
     <>
       <Helmet>
-        <title>{`${photoState.photo?.title} | Dogs`}</title>
+        <title>{`${photo?.title} | Dogs`}</title>
       </Helmet>
+
+      {deleted && <Redirect to="/" />}
 
       <PageBase>
         <Container>
-          {photoState.status === 'loading' ? (
+          {status === 'loading' ? (
             <Loading />
           ) : (
             <S.Wrapper>
-              <Image
-                src={photoState.photo?.src ? photoState.photo?.src : ''}
-                alt={photoState.photo?.title ? photoState.photo?.title : ''}
-              />
+              <Image src={photo?.src as string} alt={photo?.title as string} />
 
               <S.PhotoInfo>
-                <Link to={`/perfil/${photoState.photo?.author}`}>
-                  <S.PhotoUsername>@{photoState.photo?.author}</S.PhotoUsername>
-                </Link>
+                {username === photo?.author ? (
+                  <S.DeletePhoto onClick={handlePhotoDelete}>
+                    Deletar
+                  </S.DeletePhoto>
+                ) : (
+                  <Link to={`/perfil/${photo?.author}`}>
+                    <S.PhotoUsername>@{photo?.author}</S.PhotoUsername>
+                  </Link>
+                )}
 
                 <S.PhotoViews>
                   <ViewsIcon />
-                  {photoState.photo?.views}
+                  {photo?.views}
                 </S.PhotoViews>
               </S.PhotoInfo>
 
-              <Heading>{photoState.photo?.title}</Heading>
+              <Heading>{photo?.title}</Heading>
 
               <S.DogInfo>
-                <S.DogWeight>| {photoState.photo?.weight} kg</S.DogWeight>
-                <S.DogAge>| {photoState.photo?.age} anos</S.DogAge>
+                <S.DogWeight>| {photo?.weight} kg</S.DogWeight>
+                <S.DogAge>| {photo?.age} anos</S.DogAge>
               </S.DogInfo>
 
               <S.Coments>
-                {photoState.comments?.map((comment) => (
+                {comments?.map((comment) => (
                   <S.Coment key={comment.commentID}>
                     <b>{comment.commentAuthor}:</b>
                     {comment.commentContent}

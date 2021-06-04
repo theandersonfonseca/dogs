@@ -4,6 +4,7 @@ import * as S from './styles'
 import { fetchPhoto } from '../../store/photo'
 import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from '../../store/configureStore'
+import { PHOTO_DELETE } from '../../Api'
 
 import { Link } from 'react-router-dom'
 
@@ -25,7 +26,10 @@ type FeedModalProps = {
 }
 
 const FeedModal = ({ modal, setModal }: FeedModalProps) => {
-  const photoState = useSelector((state: RootState) => state.photo)
+  const { photo, comments, status } = useSelector(
+    (state: RootState) => state.photo
+  )
+  const { username } = useSelector((state: RootState) => state.user)
   const dispatch = useDispatch()
 
   useEffect(() => {
@@ -36,41 +40,53 @@ const FeedModal = ({ modal, setModal }: FeedModalProps) => {
     if (e.target === e.currentTarget) setModal({ open: false, id: null })
   }
 
+  const handlePhotoDelete = async () => {
+    const { url, options } = PHOTO_DELETE(photo?.id as string)
+
+    const response = await fetch(url, options)
+    const reponseData = await response.json()
+
+    if (reponseData === 'Post deletado.') window.location.reload()
+  }
+
   return (
     <>
-      {photoState.status === 'loading' ? (
+      {status === 'loading' ? (
         <Loading />
       ) : (
         <S.Wrapper onClick={handleOutsideClick}>
           <S.ContentWrapper>
-            <Image
-              src={photoState.photo?.src ? photoState.photo?.src : ''}
-              alt={photoState.photo?.title ? photoState.photo?.title : ''}
-            />
+            <Image src={photo?.src as string} alt={photo?.title as string} />
 
             <S.Content>
               <S.PhotoInfo>
-                <Link to={`/perfil/${photoState.photo?.author}`}>
-                  <S.PhotoUsername>@{photoState.photo?.author}</S.PhotoUsername>
-                </Link>
+                {username === photo?.author ? (
+                  <S.DeletePhoto onClick={handlePhotoDelete}>
+                    Deletar
+                  </S.DeletePhoto>
+                ) : (
+                  <Link to={`/perfil/${photo?.author}`}>
+                    <S.PhotoUsername>@{photo?.author}</S.PhotoUsername>
+                  </Link>
+                )}
 
                 <S.PhotoViews>
                   <ViewsIcon />
-                  {photoState.photo?.views}
+                  {photo?.views}
                 </S.PhotoViews>
               </S.PhotoInfo>
 
-              <Link to={`/foto/${photoState.photo?.id}`}>
-                <Heading>{photoState.photo?.title}</Heading>
+              <Link to={`/foto/${photo?.id}`}>
+                <Heading>{photo?.title}</Heading>
               </Link>
 
               <S.DogInfo>
-                <S.DogWeight>| {photoState.photo?.weight} kg</S.DogWeight>
-                <S.DogAge>| {photoState.photo?.age} anos</S.DogAge>
+                <S.DogWeight>| {photo?.weight} kg</S.DogWeight>
+                <S.DogAge>| {photo?.age} anos</S.DogAge>
               </S.DogInfo>
 
               <S.Coments>
-                {photoState.comments?.map((comment) => (
+                {comments?.map((comment) => (
                   <S.Coment key={comment.commentID}>
                     <b>{comment.commentAuthor}:</b>
                     {comment.commentContent}

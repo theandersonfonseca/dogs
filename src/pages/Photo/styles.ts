@@ -93,3 +93,20 @@ export const Coment = styled.span`
     }
   `}
 `
+
+export const DeletePhoto = styled.button`
+  ${({ theme }) => css`
+    font-size: ${theme.font.sizes.small};
+    color: ${theme.colors.gray};
+    background: ${theme.colors.LightGray};
+    padding: 0.4rem ${theme.spacings.xxsmall};
+    border-radius: ${theme.border.radius};
+    border: 0.1rem solid transparent;
+    transition: ${theme.transition.fast};
+
+    &:hover {
+      background: ${theme.colors.white};
+      border: 0.1rem solid ${theme.colors.gray};
+    }
+  `}
+`
