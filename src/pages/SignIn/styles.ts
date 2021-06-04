@@ -29,6 +29,10 @@ export const SignUpCallWrapper = styled.div`
   ${({ theme }) => css`
     margin-top: 8rem;
 
+    a {
+      display: inline-block;
+    }
+
     button {
       margin-top: ${theme.spacings.xsmall};
     }
