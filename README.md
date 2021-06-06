@@ -2,7 +2,7 @@
 
 ## 💻 Projeto
 
-Dogs é uma rede social de fotos de cachorros, criada a partir dos cursos de React e Redux da plataforma [Origamid](https://www.origamid.com/), para aumentar o desafio e aprendizado, utilizei tecnologias que não foram tratadas durante o curso, como, styled Components para estilização, TypeScript para tipagem e Formik e Yup para formulários. Apesar de simples, o projeto é completo, tendo:
+Dogs é uma rede social de fotos de cachorros, criada a partir dos cursos de React e Redux da plataforma [Origamid](https://www.origamid.com/), para aumentar o desafio e aprendizado, utilizei tecnologias que não foram tratadas durante o curso, como, Styled Components para estilização, TypeScript para tipagem e Formik e Yup para formulários. Apesar de simples, o projeto é completo, tendo:
 
 - Consumo de API
 - Gerenciamento de Estado
@@ -11,14 +11,23 @@ Dogs é uma rede social de fotos de cachorros, criada a partir dos cursos de Rea
 - Validação de Formulários
 - Autenticação de Usuário
 
+___
+
 ## 📷 Demonstração
 
 ![](./github/home.png)
+___
 ![](./github/login.png)
+___
 ![](./github/modal.png)
+___
 ![](./github/photo-post.png)
+___
 ![](./github/account.png)
+___
 ![](./github/dogs.gif)
+
+___
 
 ## :hammer_and_wrench: Tecnologias
 
@@ -27,7 +36,7 @@ Dogs é uma rede social de fotos de cachorros, criada a partir dos cursos de Rea
 - **[React Router DOM](https://reactrouter.com/core/guides/philosophy)**
 - **[React Helmet](https://github.com/nfl/react-helmet)**
 - **[Redux Toolkit](https://redux-toolkit.js.org/)**
-- **[Styled-components](https://styled-components.com/)**
+- **[Styled Components](https://styled-components.com/)**
 - **[Formik](https://formik.org/)**
 - **[Yup](https://github.com/jquense/yup)**
 - **[Victory](https://formidable.com/open-source/victory/)**
