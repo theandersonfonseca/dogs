@@ -1,5 +1,3 @@
-import * as S from './styles'
-
 import { Helmet } from 'react-helmet'
 
 import PageBase from '../../templates/PageBase'

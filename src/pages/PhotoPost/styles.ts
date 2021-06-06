@@ -8,15 +8,13 @@ export const Wrapper = styled.div`
 `
 
 export const Content = styled.main`
-  ${({ theme }) => css`
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-    @media (max-width: 650px) {
-      flex-direction: column;
-    }
-  `}
+  @media (max-width: 650px) {
+    flex-direction: column;
+  }
 `
 
 export const FormWrapper = styled.div`

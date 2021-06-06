@@ -51,9 +51,7 @@ export const PhotoUsername = styled.span`
   `}
 `
 
-export const PhotoViews = styled.span`
-  ${({ theme }) => css``}
-`
+export const PhotoViews = styled.span``
 
 export const DogInfo = styled.div`
   ${({ theme }) => css`
@@ -63,9 +61,7 @@ export const DogInfo = styled.div`
   `}
 `
 
-export const DogWeight = styled.span`
-  ${({ theme }) => css``}
-`
+export const DogWeight = styled.span``
 
 export const DogAge = styled.span`
   ${({ theme }) => css`
