@@ -1,4 +1,8 @@
-# Dogs
+<div align="center" style="display: flex">
+  <img src="./src/assets/dogs.svg" width="50px"/>
+</div>
+
+# 
 
 ## 💻 Projeto
 
@@ -42,3 +46,7 @@ ___
 - **[Victory](https://formidable.com/open-source/victory/)**
 - **[ESLint](https://eslint.org/)**
 - **[Prettier](https://prettier.io/)**
+
+___
+
+Feito com 💜 por **[Anderson Fonseca](https://github.com/theandersonfonseca)**. 
