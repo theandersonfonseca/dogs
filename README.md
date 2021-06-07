@@ -25,7 +25,7 @@ Dogs é uma rede social de fotos de cachorros, criada a partir dos cursos de Rea
 - **[TypeScript](https://www.typescriptlang.org/)**
 - **[React](https://pt-br.reactjs.org/)**
 - **[React Router DOM](https://reactrouter.com/core/guides/philosophy)**
-- **[React Helmet](https://github.com/nfl/react-helmet)**
+- **[React Helmet Async](https://github.com/staylor/react-helmet-async)**
 - **[Redux Toolkit](https://redux-toolkit.js.org/)**
 - **[Styled-components](https://styled-components.com/)**
 - **[Formik](https://formik.org/)**

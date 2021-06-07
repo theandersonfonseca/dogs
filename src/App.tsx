@@ -5,6 +5,7 @@ import GlobalStyle from './styles/global'
 import theme from './styles/theme'
 
 import Routes from './routes/index'
+import { HelmetProvider } from 'react-helmet-async'
 
 import { fetchUser } from './store/user'
 import { useDispatch } from 'react-redux'
@@ -19,10 +20,12 @@ function App() {
   }, [dispatch])
 
   return (
-    <ThemeProvider theme={theme}>
-      <Routes />
-      <GlobalStyle />
-    </ThemeProvider>
+    <HelmetProvider>
+      <ThemeProvider theme={theme}>
+        <Routes />
+        <GlobalStyle />
+      </ThemeProvider>
+    </HelmetProvider>
   )
 }
 

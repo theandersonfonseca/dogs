@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import * as S from './styles'
 
-import { Helmet } from 'react-helmet'
+import { Helmet } from 'react-helmet-async'
 
 import { Formik, Form, FormikProps } from 'formik'
 import * as yup from 'yup'

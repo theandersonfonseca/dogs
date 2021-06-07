@@ -1,6 +1,6 @@
 import * as S from './styles'
 
-import { Helmet } from 'react-helmet'
+import { Helmet } from 'react-helmet-async'
 
 import PageBase from '../../templates/PageBase'
 import Heading from '../../components/Heading'

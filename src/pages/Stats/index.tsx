@@ -1,7 +1,7 @@
 import { lazy, Suspense, useEffect, useState } from 'react'
 import * as S from './styles'
 
-import { Helmet } from 'react-helmet'
+import { Helmet } from 'react-helmet-async'
 
 import { STATS_GET } from '../../Api'
 

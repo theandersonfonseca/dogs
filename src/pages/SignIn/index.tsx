@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import * as S from './styles'
 
-import { Helmet } from 'react-helmet'
+import { Helmet } from 'react-helmet-async'
 import { Link, Redirect } from 'react-router-dom'
 
 import { Formik, Form } from 'formik'

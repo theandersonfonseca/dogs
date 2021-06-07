@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet'
+import { Helmet } from 'react-helmet-async'
 
 import PageBase from '../../templates/PageBase'
 import Container from '../../components/Container'

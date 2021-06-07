@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import * as S from './styles'
 
 import { Link, Redirect, useParams } from 'react-router-dom'
-import { Helmet } from 'react-helmet'
+import { Helmet } from 'react-helmet-async'
 
 import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from '../../store/configureStore'

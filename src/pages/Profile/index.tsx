@@ -1,6 +1,6 @@
 import * as S from './styles'
 
-import { Helmet } from 'react-helmet'
+import { Helmet } from 'react-helmet-async'
 import { useParams } from 'react-router'
 
 import PageBase from '../../templates/PageBase'
