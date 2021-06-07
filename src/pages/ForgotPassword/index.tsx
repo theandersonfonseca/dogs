@@ -7,12 +7,14 @@ import { Helmet } from 'react-helmet'
 import { Formik, Form } from 'formik'
 import * as yup from 'yup'
 
+import { PASSWORD_LOST } from '../../Api'
+import IsAuth from '../../helpers/isAuth'
+import { Redirect } from 'react-router'
+
 import FormBase from '../../templates/FormBase'
 import Heading from '../../components/Heading'
 import TextField from '../../components/TextField'
 import Button from '../../components/Button'
-
-import { PASSWORD_LOST } from '../../Api'
 
 type FormType = {
   email: string
@@ -50,6 +52,8 @@ const ForgotPassword = () => {
       <Helmet>
         <title>Esqueceu a senha | Dogs</title>
       </Helmet>
+
+      {IsAuth() && <Redirect to="/conta" />}
 
       <FormBase>
         {msg ? (

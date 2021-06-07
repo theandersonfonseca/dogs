@@ -8,12 +8,13 @@ import { Redirect } from 'react-router'
 import { Formik, Form } from 'formik'
 import * as yup from 'yup'
 
+import { PASSWORD_RESET } from '../../Api'
+import IsAuth from '../../helpers/isAuth'
+
 import FormBase from '../../templates/FormBase'
 import Heading from '../../components/Heading'
 import TextField from '../../components/TextField'
 import Button from '../../components/Button'
-
-import { PASSWORD_RESET } from '../../Api'
 
 type FormType = {
   password: string
@@ -69,6 +70,8 @@ const ForgotPassword = () => {
       <Helmet>
         <title>Resertar senha | Dogs</title>
       </Helmet>
+
+      {IsAuth() && <Redirect to="/conta" />}
 
       {status === 'success' && <Redirect to="/login" />}
 
