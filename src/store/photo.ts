@@ -77,12 +77,17 @@ export const photoSlice = createSlice({
 
           state.photo = { id, author, title, views, weight, age, src }
 
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          state.comments = action.payload.comments.map((comment: any) => ({
-            commentID: comment.comment_ID,
-            commentContent: comment.comment_content,
-            commentAuthor: comment.comment_author
-          }))
+          state.comments = action.payload.comments.map(
+            (comment: {
+              comment_ID: number
+              comment_content: string
+              comment_author: string
+            }) => ({
+              commentID: comment.comment_ID,
+              commentContent: comment.comment_content,
+              commentAuthor: comment.comment_author
+            })
+          )
 
           return
         }
