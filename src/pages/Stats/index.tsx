@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { lazy, Suspense, useEffect, useState } from 'react'
 import * as S from './styles'
 
 import { Helmet } from 'react-helmet'
@@ -10,7 +10,9 @@ import Heading from '../../components/Heading'
 import Container from '../../components/Container'
 import AccountNav from '../../components/AccountNav'
 import Loading from '../../components/Loading'
-import StatsGraphs, { StatsType } from '../../components/StatsGraphs'
+import { StatsType } from '../../components/StatsGraphs'
+
+const StatsGraphs = lazy(() => import('../../components/StatsGraphs'))
 
 const Stats = () => {
   const [loading, setLoading] = useState(false)
@@ -50,7 +52,9 @@ const Stats = () => {
             <Loading />
           ) : (
             <S.GraphWrapper>
-              <StatsGraphs data={data} />
+              <Suspense fallback={<div></div>}>
+                <StatsGraphs data={data} />
+              </Suspense>
             </S.GraphWrapper>
           )}
         </Container>
