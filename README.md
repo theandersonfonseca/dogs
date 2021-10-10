@@ -4,11 +4,15 @@
 
 ## 💻 Sobre o projeto
 
-Dogs é uma rede social de fotos de cachorros, criada a partir dos cursos de React e Redux da plataforma **[Origamid](https://www.origamid.com/)**, o usuário pode comentar em fotos de outros usuários e pode postar as suas próprias. Para aumentar o desafio e aprendizado, utilizei tecnologias que não foram tratadas durante os cursos, como Styled Components para estilização, TypeScript para tipagem e Formik e Yup para formulários.
+Dogs é uma rede social de fotos de cachorros, desenvolvida a partir dos cursos de React e Redux da plataforma **[Origamid](https://www.origamid.com/)**, o usuário pode comentar em fotos de outros usuários e pode postar as suas próprias. Para aumentar o desafio e aprendizado, utilizei tecnologias que não foram tratadas durante os cursos, como Styled Components para estilização, TypeScript para tipagem e Formik e Yup para formulários.
 
 - **[Acesse a aplicação](https://dogs-origamid-two.vercel.app/)**
 
 ![](./github/dogs.gif)
+
+---
+
+![](./github/dogs-mobile.gif)
 
 ---
 
