@@ -1,52 +1,64 @@
-<div align="center" style="display: flex">
-  <img src="./src/assets/dogs.svg" width="50px"/>
+<div align="center">
+  <img src="./src/assets/dogs.svg" width="75px"/>
 </div>
 
-# 
+## 💻 Sobre o projeto
 
-## 💻 Projeto
+Dogs é uma rede social de fotos de cachorros, criada a partir dos cursos de React e Redux da plataforma **[Origamid](https://www.origamid.com/)**, o usuário pode comentar em fotos de outros usuários e pode postar as suas próprias. Para aumentar o desafio e aprendizado, utilizei tecnologias que não foram tratadas durante os cursos, como Styled Components para estilização, TypeScript para tipagem e Formik e Yup para formulários.
 
-Dogs é uma rede social de fotos de cachorros, criada a partir dos cursos de React e Redux da plataforma [Origamid](https://www.origamid.com/), para aumentar o desafio e aprendizado, utilizei tecnologias que não foram tratadas durante os cursos, como, Styled Components para estilização, TypeScript para tipagem e Formik e Yup para formulários. Apesar de simples, o projeto é completo, tendo:
+- **[Acesse a aplicação](https://dogs-origamid-two.vercel.app/)**
 
-- Consumo de API
-- Gerenciamento de Estado
-- Sistema de Rotas
-- Páginas de Login, Cadastro, Perdeu a senha e Resetar senha
-- Validação de Formulários
-- Autenticação de Usuário
-
-___
-
-## 📷 Demonstração
-
-![](./github/home.png)
-___
-![](./github/login.png)
-___
-![](./github/modal.png)
-___
-![](./github/photo-post.png)
-___
-![](./github/account.png)
-___
 ![](./github/dogs.gif)
 
-___
+---
 
-## :hammer_and_wrench: Tecnologias
+## :hammer_and_wrench: Tecnologias utilizadas
 
 - **[TypeScript](https://www.typescriptlang.org/)**
 - **[React](https://pt-br.reactjs.org/)**
-- **[React Router DOM](https://reactrouter.com/core/guides/philosophy)**
-- **[React Helmet Async](https://github.com/staylor/react-helmet-async)**
-- **[Redux Toolkit](https://redux-toolkit.js.org/)**
 - **[Styled Components](https://styled-components.com/)**
+- **[React Router](https://reactrouter.com/core/guides/philosophy)**
+- **[Redux Toolkit](https://redux-toolkit.js.org/)**
 - **[Formik](https://formik.org/)**
 - **[Yup](https://github.com/jquense/yup)**
 - **[Victory](https://formidable.com/open-source/victory/)**
 - **[ESLint](https://eslint.org/)**
 - **[Prettier](https://prettier.io/)**
 
-___
+---
 
-Feito com 💜 por **[Anderson Fonseca](https://github.com/theandersonfonseca)**. 
+## ⚙️ Executando o projeto
+
+### Pré-requisitos
+
+- **[GIT](https://git-scm.com/)**
+- **[Node](https://nodejs.org/en/)**
+- **[Yarn](https://classic.yarnpkg.com/en/docs/install/)**
+
+**Clone o repositório**
+
+```
+git clone https://github.com/theandersonfonseca/dogs.git
+```
+
+**Acesse a pasta do projeto**
+
+```
+cd dogs
+```
+
+**Instale as dependências**
+
+```
+npm install
+```
+
+**Inicie a aplicação**
+
+```
+npm start
+```
+
+---
+
+Feito com 💜 por **[Anderson Fonseca](https://github.com/theandersonfonseca)**.
